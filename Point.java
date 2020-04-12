@@ -1,8 +1,14 @@
 class Point {
 	String id;
 	String color;
+	double x, y;
 	
-	double x,y;
+	public Point(String id, double x, double y){
+		this.id = id;
+		this.x = x;
+		this.y = y;
+	}
+	
 
 	//TODO add new variable
 
@@ -11,13 +17,17 @@ class Point {
 	//TODO setters and getters
 
 	public void move (char xDirection, char yDirection) {
-		//TODO
+		if (xDirection == "R")
+			x++;
+		if (xDirection == "L")
+			x--;
+		if (yDirection == "U")
+			y++;
+		if (yDirection == "D")
+			y--;
 	}
 
 	public void draw () {
-		//TODO
+		System.out.println("Point " + id + ": " + this.x + ", " + this.y);
 	}
-
-
-
 }
